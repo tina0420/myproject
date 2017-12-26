@@ -5,7 +5,7 @@ public class Student {
 	int english;
 	int math;
 	String name;
-	
+	static int pass;
  	//public Student(String n,int e, int m, int c){
 	//name = n ;
 	//english = e;
@@ -28,5 +28,10 @@ public class Student {
  	public int getAverage(){
 		return (english+math+chinese)/3;
 	}
+ 	
+ 	public Student(){
+ 		//空建構值
+ 	}
+ 		
 
 }
