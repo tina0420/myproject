@@ -1,11 +1,11 @@
 package com.tina.oo;
 
 public class Student {
-	int chinese;
-	int english;
-	int math;
+	protected int chinese;
+	protected int english;
+    int math;
 	String name;
-	static int pass;
+	static int pass=60;
  	//public Student(String n,int e, int m, int c){
 	//name = n ;
 	//english = e;
@@ -21,13 +21,17 @@ public class Student {
 		this.name = n;
 	}
  	public void print(){
+		System.out.println("pass");
 		System.out.println(english+"\t"+
-	                math+"\t"+chinese);
+		                math+"\t"+chinese);
 	}
  	
- 	public int getAverage(){
+ 	 int getAverage(){
 		return (english+math+chinese)/3;
 	}
+ 	public static void method(){
+ 		System.out.println("Hello!");
+ 	}
  	
  	public Student(){
  		//空建構值
