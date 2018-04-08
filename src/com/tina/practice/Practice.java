@@ -1,4 +1,4 @@
-package com.tina;
+package com.tina.practice;
 
 import java.util.Scanner;
 
