@@ -6,17 +6,27 @@ import java.io.IOException;
 
 public class FileTester {
 
-	public static void main(String[] args) {
-		try {
-			FileOutputStream out = new FileOutputStream("data.txt");
-			out.write(65);
-			out.flush();
-			out.close();
-		}catch (IOException e){
-			e.printStackTrace();
-		}
+	public static void main(String[] args) throws FileNotFoundException {
 		
+			FileOutputStream out = new FileOutputStream("data.txt");
+			try {
+				out.write(65);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				out.flush();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				out.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		
 	}
-
 }
