@@ -1,13 +1,9 @@
 package com.java2.oo;
 
-public class Chat {
-<<<<<<< HEAD
-	String chat;
-=======
+public class Chat2 {
 
 	public static void main(String[] args) {
 
 	}
->>>>>>> chat
 
 }
