@@ -7,8 +7,9 @@ import java.util.Scanner;
 public class VendingMain {
 
 	public static void main(String[] args) {
-		int total = 0;
-		List<Drink> drinks = new ArrayList<>();
+		Drink a = new Drink(111,"a",10);
+		Drink b = new Drink(222,"b",25);
+		Drink c = new Drink(333,"c",30);
 			}
 
 }
