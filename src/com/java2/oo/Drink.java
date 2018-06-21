@@ -1,6 +1,7 @@
 package com.java2.oo;
 
 public class Drink {
+	public static final String txt = null;
 	int id;
 	String name;
 	int price;
@@ -10,6 +11,11 @@ public class Drink {
 		this.price = price;
 	}
 	
+	//多寫一個空的建構子是為了滿足JavaBean 
+	//JavaBean：一個空的建構子與getter setter 
+	public Drink() {
+		
+	}
 	public void setId(int id){
 		this.id = id;
 	}
