@@ -1,5 +1,13 @@
 package com.java2.schedule;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 /*有一文字檔儲存了課表資訊(schedule.txt)
  * 請讀取資料後，設計程式可檢查是否有空檔?
  * 如:
@@ -12,9 +20,21 @@ package com.java2.schedule;
  */
 public class Main {
 	
-
 	public static void main(String[] args) {
-
+		List<Course> courses = new ArrayList<>();
+		try {
+			FileReader fr = new FileReader("schedule.txt");
+			BufferedReader br = new BufferedReader(fr);
+			
+			String line = br.readLine();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 }
