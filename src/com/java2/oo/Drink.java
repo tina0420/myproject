@@ -11,11 +11,11 @@ public class Drink {
 		this.price = price;
 	}
 	
-	//多寫一個空的建構子是為了滿足JavaBean 
-	//JavaBean：一個空的建構子與getter setter 
 	public Drink() {
-		
+		//多寫一個空的建構子是為了滿足JavaBean 
+		//JavaBean：一個空的建構子與getter setter 
 	}
+	
 	public void setId(int id){
 		this.id = id;
 	}

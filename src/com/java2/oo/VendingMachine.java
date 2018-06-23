@@ -22,37 +22,40 @@ public class VendingMachine {
 		if (choice != "0") {
 			switch(choice) {
 			case "a":
-				if (total >= 10) {
+				if (total >= 25) {
 					Drink drink = drinks.get(0);
 					System.out.println("購買a"+"\t"+drink.getPrice()+"元");
-					total=total-10;
+					System.out.println("謝謝購買!");
+					total=total-drink.getPrice();
 					break;
 				}else {
 					System.out.println("餘額不足");
 					break;
 				}
 			case "b":
-				if (total >= 25) {
+				if (total >= 30) {
 					Drink drink = drinks.get(1);
-					System.out.println("購買a"+"\t"+drink.getPrice()+"元");
-					total=total-25;
+					System.out.println("購買b"+"\t"+drink.getPrice()+"元");
+					System.out.println("謝謝購買!");
+					total=total-drink.getPrice();
 					break;
 				}else {
 					System.out.println("餘額不足");
 					break;
 				}
 			case "c":
-				if (total >= 30) {
+				if (total >= 20) {
 					Drink drink = drinks.get(2);
-					System.out.println("購買a"+"\t"+drink.getPrice()+"元");
-					total=total-30;
+					System.out.println("購買c"+"\t"+drink.getPrice()+"元");
+					System.out.println("謝謝購買!");
+					total=total-20;
 					break;
 				}else {
 					System.out.println("餘額不足");
 					break;
 				}
-			case "1":
-				total = total+1;
+			case "50":
+				total = total+50;
 				System.out.println("餘額:"+total);
 				break;
 			case "5":
