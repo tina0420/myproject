@@ -9,7 +9,8 @@ public class Course {
 	int weekday;
 	int time;
 	int duration;
-public Course(String id, String object, int weekday, int time, int duration) {
+
+	public Course(String id, String object, int weekday, int time, int duration) {
 	this.id=id;
 	this.object=object;
 	this.time=time;
