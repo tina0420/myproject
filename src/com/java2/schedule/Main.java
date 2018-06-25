@@ -19,43 +19,52 @@ import java.util.Scanner;
  * [有課: C004 Engiish 到16時]
  */
 public class Main {
-	
-	List<Course> courses = new ArrayList<>();
-	public Main() {
-		readcourses();
+	public static void main(String[] args) {
+		Main m = new Main();
+		m.readcourses();
 	}
+
+	List<Course> courses = new ArrayList<>();
+	//public Main() {
+		//readcourses();
+//	}
 	public void readcourses() {
 		try {
 			FileReader fr = new FileReader("schedule.txt");
 			BufferedReader br = new BufferedReader(fr);
-			String line;
-			Scanner scanner = new Scanner(System.in);
-			System.out.println("請輸入星期(1~7)");
-			int w = scanner.nextInt();
-			System.out.println("請輸入時間(0~24)");
-			int t = scanner.nextInt();
-			for (int i=0; i<5; i++) {
-				line = br.readLine();
-			    String[] token = line.split(",");
-			    String id = token[0];
-			    String object = token[1];
-			    int weekday = Integer.parseInt(token[2]);
-			    int time = Integer.parseInt(token[3]);
-			    int duration = Integer.parseInt(token[4]);
-			    Course c = new Course(id, object, weekday, time, duration);
-			    //且:&&  或:||
-			    //&&只要前面為false，就不會繼續計算後面的
-			    if(c.weekday==w) {
-			    	if(c.time<=t && t<=(c.time+c.duration)) {
-			    		System.out.println("[有課:"+"\t"+id+"\t"+object+"\t"+"到"+"\t"+(time+duration)+"時");
-			            break;            
-			    	}else {
-			    	System.out.println("[有空堂]");
-			    	break;
-			    }
-					
-			    }else {
-			    }
+			
+			while(true) {
+				String line;
+				Scanner scanner = new Scanner(System.in);
+				System.out.println("請輸入星期(1~7)");
+				int w = scanner.nextInt();
+				System.out.println("請輸入時間(0~24)");
+				int t = scanner.nextInt();
+				for (int i=0; i<5; i++) {
+					line = br.readLine();
+				    String[] token = line.split(",");
+				    String id = token[0];
+				    String object = token[1];
+				    int weekday = Integer.parseInt(token[2]);
+				    int time = Integer.parseInt(token[3]);
+				    int duration = Integer.parseInt(token[4]);
+				    Course c = new Course(id, object, weekday, time, duration);
+				    //且:&&  或:||
+				    //&&只要前面為false，就不會繼續計算後面的	 
+				    if(weekday==w) {
+				    	if(time<=t && t<=(time+duration)) {
+				    		System.out.println("[有課:"+"\t"+c.getId()+"\t"+c.getObject()+"\t"+"到"+"\t"+(c.getTime()+c.getDuration())+"時"+"]");
+				            break;            
+				    	}else { 
+				    		System.out.println("[有空堂]");
+					    	break;
+				    		}
+				    	}
+				    else { 
+				    	
+				    }
+			}
+				System.out.println("");
 			}
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
@@ -65,8 +74,5 @@ public class Main {
 			e.printStackTrace();
 		}
 	}
-	public static void main(String[] args) {
-		Main m = new Main();
-	}
-
+	
 }
