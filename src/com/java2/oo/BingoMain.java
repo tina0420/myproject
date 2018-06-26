@@ -1,4 +1,5 @@
 package com.java2.oo;
+
 /*讀取bingo.txt，資料如下:
 25
 8,4,7,18,21,3,5,1,9,10
